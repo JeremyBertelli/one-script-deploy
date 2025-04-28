@@ -5,192 +5,192 @@
 ###############################
 
 # Main cluster info
-export CLUSTER_NAME=
-export NODES_BASE=
-export NODE_IPA=
-export NODES_KTS=
+export CLUSTER_NAME="${CLUSTER_NAME:-}"
+export NODES_BASE="${NODES_BASE:-}"
+export NODE_IPA="${NODE_IPA:-}"
+export NODES_KTS="${NODES_KTS:-}"
 
 # License 
-export PAYWALL_USER=
-export PAYWALL_PASSWORD=
-export LICENSE_FILE=
-export CM_LICENSE_TYPE="enterprise"
+export PAYWALL_USER="${PAYWALL_USER:-}"
+export PAYWALL_PASSWORD="${PAYWALL_PASSWORD:-}"
+export LICENSE_FILE="${LICENSE_FILE:-}"
+export CM_LICENSE_TYPE="${CM_LICENSE_TYPE:-enterprise}"
 
 # Nodes connection
-export NODE_USER="root"
-export NODE_KEY=""
-export NODE_PASSWORD=""
-export SETUP_HOSTS_KEYS="true"
-export SETUP_ETC_HOSTS="true"
+export NODE_USER="${NODE_USER:-root}"
+export NODE_KEY="${NODE_KEY:-}"
+export NODE_PASSWORD="${NODE_PASSWORD:-}"
+export SETUP_HOSTS_KEYS="${SETUP_HOSTS_KEYS:-true}"
+export SETUP_ETC_HOSTS="${SETUP_ETC_HOSTS:-true}"
 
 # Steps to do
-export PRE_INSTALL="true"
-export PREPARE_ANSIBLE_DEPLOYMENT="true"
-export SETUP_DB_NO_GL="true"
-export INSTALL="true"
-export POST_INSTALL="true"
-export USER_CREATION="true"
-export DATA_LOAD="true"
-export DEMO="false"
-export IS_REBOOT_REQUIRED="false"
+export PRE_INSTALL="${PRE_INSTALL:-true}"
+export PREPARE_ANSIBLE_DEPLOYMENT="${PREPARE_ANSIBLE_DEPLOYMENT:-true}"
+export SETUP_DB_NO_GL="${SETUP_DB_NO_GL:-true}"
+export INSTALL="${INSTALL:-true}"
+export POST_INSTALL="${POST_INSTALL:-true}"
+export USER_CREATION="${USER_CREATION:-true}"
+export DATA_LOAD="${DATA_LOAD:-true}"
+export DEMO="${DEMO:-false}"
+export IS_REBOOT_REQUIRED="${IS_REBOOT_REQUIRED:-false}"
 
 # Auth & Log
-export DEFAULT_PASSWORD="Cloudera1234"
-export DEFAULT_ADMIN_USER="francois"
-export DEBUG="false"
-export LOG_DIR="/tmp/one_script_deploy_logs/"$(date +%m-%d-%Y-%H-%M-%S)
+export DEFAULT_PASSWORD="${DEFAULT_PASSWORD:-Cloudera1234}"
+export DEFAULT_ADMIN_USER="${DEFAULT_ADMIN_USER:-francois}"
+export DEBUG="${DEBUG:-false}"
+export LOG_DIR="${LOG_DIR:-/tmp/one_script_deploy_logs/$(date +%m-%d-%Y-%H-%M-%S)}"
 
 # Ansible Deployment files 
-export DISTRIBUTION_TO_DEPLOY="CDP"
-export CLUSTER_TYPE="full"
-export ANSIBLE_HOST_FILE="ansible-cdp/hosts"
-export ANSIBLE_ALL_FILE="ansible-cdp/all"
-export ANSIBLE_CLUSTER_YML_FILE="ansible-cdp/cluster.yml"
-export ANSIBLE_EXTRA_VARS_YML_FILE="ansible-cdp/extra_vars.yml"
+export DISTRIBUTION_TO_DEPLOY="${DISTRIBUTION_TO_DEPLOY:-CDP}"
+export CLUSTER_TYPE="${CLUSTER_TYPE:-full}"
+export ANSIBLE_HOST_FILE="${ANSIBLE_HOST_FILE:-ansible-cdp/hosts}"
+export ANSIBLE_ALL_FILE="${ANSIBLE_ALL_FILE:-ansible-cdp/all}"
+export ANSIBLE_CLUSTER_YML_FILE="${ANSIBLE_CLUSTER_YML_FILE:-ansible-cdp/cluster.yml}"
+export ANSIBLE_EXTRA_VARS_YML_FILE="${ANSIBLE_EXTRA_VARS_YML_FILE:-ansible-cdp/extra_vars.yml}"
 
 # Security
-export KERBEROS="true"
-export TLS="true"
-export FREE_IPA="false"
-export REALM="FRISCH.COM"
-export ENCRYPTION_ACTIVATED="false"
-export ENCRYPTION_ACTIVATED_NO_KTS="true"
+export KERBEROS="${KERBEROS:-true}"
+export TLS="${TLS:-true}"
+export FREE_IPA="${FREE_IPA:-false}"
+export REALM="${REALM:-FRISCH.COM}"
+export ENCRYPTION_ACTIVATED="${ENCRYPTION_ACTIVATED:-false}"
+export ENCRYPTION_ACTIVATED_NO_KTS="${ENCRYPTION_ACTIVATED_NO_KTS:-true}"
 
 # Versions
-export JDK_VERSION="17"
-export CM_VERSION="7.13.1.0"
-export CDH_VERSION="7.3.1.0"
-export CSA_VERSION="1.14.0.0"
-export CFM_VERSION="2.2.9.0"
-export CEM_VERSION="2.2.0.0"
-export SPARK3_VERSION="3.3.7191000.3"
-export OBSERVABILITY_VERSION="3.5.3-h1"
-export PVC_VERSION="1.5.4-h15"
+export JDK_VERSION="${JDK_VERSION:-17}"
+export CM_VERSION="${CM_VERSION:-7.13.1.0}"
+export CDH_VERSION="${CDH_VERSION:-7.3.1.0}"
+export CSA_VERSION="${CSA_VERSION:-1.14.0.0}"
+export CFM_VERSION="${CFM_VERSION:-2.2.9.0}"
+export CEM_VERSION="${CEM_VERSION:-2.2.0.0}"
+export SPARK3_VERSION="${SPARK3_VERSION:-3.3.7191000.3}"
+export OBSERVABILITY_VERSION="${OBSERVABILITY_VERSION:-3.5.3-h1}"
+export PVC_VERSION="${PVC_VERSION:-1.5.4-h15}"
 
-export AMBARI_VERSION="2.7.5.0"
-export HDP_VERSION="3.1.5.6091"
-export HDF_VERSION="3.5.2.0"
+export AMBARI_VERSION="${AMBARI_VERSION:-2.7.5.0}"
+export HDP_VERSION="${HDP_VERSION:-3.1.5.6091}"
+export HDF_VERSION="${HDF_VERSION:-3.5.2.0}"
 
 # Repository (if not specified, version is used to guess repository from it)
-export CM_REPO=
-export CDH_REPO=
-export PVC_REPO=
-export CSA_BASE_REPO=
-export CFM_BASE_REPO=
-export CEM_BASE_REPO=
-export SPARK3_BASE_REPO=
-export OBSERVABILITY_BASE_REPO=
-export AMBARI_REPO=
-export HDP_REPO=
-export HDF_REPO=
+export CM_REPO="${CM_REPO:-}"
+export CDH_REPO="${CDH_REPO:-}"
+export PVC_REPO="${PVC_REPO:-}"
+export CSA_BASE_REPO="${CSA_BASE_REPO:-}"
+export CFM_BASE_REPO="${CFM_BASE_REPO:-}"
+export CEM_BASE_REPO="${CEM_BASE_REPO:-}"
+export SPARK3_BASE_REPO="${SPARK3_BASE_REPO:-}"
+export OBSERVABILITY_BASE_REPO="${OBSERVABILITY_BASE_REPO:-}"
+export AMBARI_REPO="${AMBARI_REPO:-}"
+export HDP_REPO="${HDP_REPO:-}"
+export HDF_REPO="${HDF_REPO:-}"
 
 # Database
-export DATABASE_TYPE="postgresql"
-export DATABASE_VERSION="14"
+export DATABASE_TYPE="${DATABASE_TYPE:-postgresql}"
+export DATABASE_VERSION="${DATABASE_VERSION:-14}"
 
 # OS Related
-export OS="rhel"
-export OS_VERSION="8.8"
-export INSTALL_PYTHON3="true"
+export OS="${OS:-rhel}"
+export OS_VERSION="${OS_VERSION:-8.8}"
+export INSTALL_PYTHON3="${INSTALL_PYTHON3:-true}"
 
 # PVC related
-export CLUSTER_NAME_PVC=
-export NODES_PVC_ECS=
-export KUBECONFIG_PATH=
-export INSTALL_PVC="true"
-export CONFIGURE_PVC="true"
-export SKIP_PVC_PREREQS="false"
-export PVC="false"
-export PVC_TYPE="ECS"
-export CREATE_CDW="true"
-export CREATE_CDE="true"
-export CREATE_CML="true"
-export CREATE_CML_REGISTRY="true"
-export CREATE_VIZ="true"
-export OC_TAR_FILE_PATH=""
-export CONFIGURE_OC="true"
-export SETUP_DNS_ECS="true"
-export PVC_APP_DOMAIN=""
-export PVC_ECO_RESOURCES="false"
-export SETUP_PVC_TOOLS="false"
-export ECS_SSD_DEDICATED_NODES=""
-export ECS_GPU_DEDICATED_NODES=""
-export NEED_EXTRA_ECS_SERVICE_SAFETY_VALVE="false"
+export CLUSTER_NAME_PVC="${CLUSTER_NAME_PVC:-}"
+export NODES_PVC_ECS="${NODES_PVC_ECS:-}"
+export KUBECONFIG_PATH="${KUBECONFIG_PATH:-}"
+export INSTALL_PVC="${INSTALL_PVC:-true}"
+export CONFIGURE_PVC="${CONFIGURE_PVC:-true}"
+export SKIP_PVC_PREREQS="${SKIP_PVC_PREREQS:-false}"
+export PVC="${PVC:-false}"
+export PVC_TYPE="${PVC_TYPE:-ECS}"
+export CREATE_CDW="${CREATE_CDW:-true}"
+export CREATE_CDE="${CREATE_CDE:-true}"
+export CREATE_CML="${CREATE_CML:-true}"
+export CREATE_CML_REGISTRY="${CREATE_CML_REGISTRY:-true}"
+export CREATE_VIZ="${CREATE_VIZ:-true}"
+export OC_TAR_FILE_PATH="${OC_TAR_FILE_PATH:-}"
+export CONFIGURE_OC="${CONFIGURE_OC:-true}"
+export SETUP_DNS_ECS="${SETUP_DNS_ECS:-true}"
+export PVC_APP_DOMAIN="${PVC_APP_DOMAIN:-}"
+export PVC_ECO_RESOURCES="${PVC_ECO_RESOURCES:-false}"
+export SETUP_PVC_TOOLS="${SETUP_PVC_TOOLS:-false}"
+export ECS_SSD_DEDICATED_NODES="${ECS_SSD_DEDICATED_NODES:-}"
+export ECS_GPU_DEDICATED_NODES="${ECS_GPU_DEDICATED_NODES:-}"
+export NEED_EXTRA_ECS_SERVICE_SAFETY_VALVE="${NEED_EXTRA_ECS_SERVICE_SAFETY_VALVE:-false}"
 
 # External CSD
-export USE_CSA="false"
-export USE_CFM="false"
-export USE_CEM="false"
-export USE_SPARK3="false"
-export USE_OBSERVABILITY="false"
+export USE_CSA="${USE_CSA:-false}"
+export USE_CFM="${USE_CFM:-false}"
+export USE_CEM="${USE_CEM:-false}"
+export USE_SPARK3="${USE_SPARK3:-false}"
+export USE_OBSERVABILITY="${USE_OBSERVABILITY:-false}"
 
 # OBSERVABILITY Related
-export ALTUS_KEY_ID=
-export ALTUS_PRIVATE_KEY=
-export CM_BASE_URL=
-export CM_BASE_USER="admin"
-export CM_BASE_PASSWORD="admin"
-export TP_HOST=
+export ALTUS_KEY_ID="${ALTUS_KEY_ID:-}"
+export ALTUS_PRIVATE_KEY="${ALTUS_PRIVATE_KEY:-}"
+export CM_BASE_URL="${CM_BASE_URL:-}"
+export CM_BASE_USER="${CM_BASE_USER:-admin}"
+export CM_BASE_PASSWORD="${CM_BASE_PASSWORD:-admin}"
+export TP_HOST="${TP_HOST:-}"
 
 # Installation
-export INSTALL_REPO_URL="https://github.com/frischHWC/cldr-playbook/archive/refs/heads/main.zip"
-export ANSIBLE_REPO_DIR="cldr-playbook-main"
-export CM_COLOR="RANDOM"
-export ROOT_CA_CERT=
-export ROOT_CA_KEY=
+export INSTALL_REPO_URL="${INSTALL_REPO_URL:-https://github.com/frischHWC/cldr-playbook/archive/refs/heads/main.zip}"
+export ANSIBLE_REPO_DIR="${ANSIBLE_REPO_DIR:-cldr-playbook-main}"
+export CM_COLOR="${CM_COLOR:-RANDOM}"
+export ROOT_CA_CERT="${ROOT_CA_CERT:-}"
+export ROOT_CA_KEY="${ROOT_CA_KEY:-}"
 
 # Data Load
-export DATA_LOAD_REPO_URL=""
-export DATAGEN_AS_A_SERVICE="true"
-export DATAGEN_REPO_URL="https://github.com/frischHWC/datagen"
-export DATAGEN_REPO_BRANCH="main"
-export DATAGEN_REPO_PARCEL=""
-export DATAGEN_CSD_URL=""
-export DATAGEN_VERSION="1.0.1"
-export EDGE_HOST=""
+export DATA_LOAD_REPO_URL="${DATA_LOAD_REPO_URL:-}"
+export DATAGEN_AS_A_SERVICE="${DATAGEN_AS_A_SERVICE:-true}"
+export DATAGEN_REPO_URL="${DATAGEN_REPO_URL:-https://github.com/frischHWC/datagen}"
+export DATAGEN_REPO_BRANCH="${DATAGEN_REPO_BRANCH:-main}"
+export DATAGEN_REPO_PARCEL="${DATAGEN_REPO_PARCEL:-}"
+export DATAGEN_CSD_URL="${DATAGEN_CSD_URL:-}"
+export DATAGEN_VERSION="${DATAGEN_VERSION:-1.0.1}"
+export EDGE_HOST="${EDGE_HOST:-}"
 
 # Demo
-export DEMO_REPO_URL="https://github.com/frischHWC/cdp-demo"
-export DEMO_REPO_BRANCH="main"
+export DEMO_REPO_URL="${DEMO_REPO_URL:-https://github.com/frischHWC/cdp-demo}"
+export DEMO_REPO_BRANCH="${DEMO_REPO_BRANCH:-main}"
 
 # CDH 6 - KTS 
-export CDH6_KTS_PATH="~/Downloads/keytrustee-server-6.1.0-parcels.tar.gz"
-export CDH6_KTS_KMS_PATH="~/Downloads/keytrustee-kms-6.3.0-parcels.tar.gz"
+export CDH6_KTS_PATH="${CDH6_KTS_PATH:-~/Downloads/keytrustee-server-6.1.0-parcels.tar.gz}"
+export CDH6_KTS_KMS_PATH="${CDH6_KTS_KMS_PATH:-~/Downloads/keytrustee-kms-6.3.0-parcels.tar.gz}"
 
 # K8s Operators
-export CFM_OPERATOR_VERSION="2.9.0-b96"
-export CFM_OPERATOR_DEPLOY="false"
-export CFM_OPERATOR_NIFI_DEPLOY="false"
-export CSA_OPERATOR_VERSION="1.2.0-b27"
-export CSA_OPERATOR_DEPLOY="false"
-export CSA_OPERATOR_FLINK_DEPLOY="false"
-export KAFKA_OPERATOR_VERSION="1.3.0-b52"
-export KAFKA_OPERATOR_DEPLOY="false"
-export KAFKA_OPERATOR_KAFKA_DEPLOY="false"
+export CFM_OPERATOR_VERSION="${CFM_OPERATOR_VERSION:-2.9.0-b96}"
+export CFM_OPERATOR_DEPLOY="${CFM_OPERATOR_DEPLOY:-false}"
+export CFM_OPERATOR_NIFI_DEPLOY="${CFM_OPERATOR_NIFI_DEPLOY:-false}"
+export CSA_OPERATOR_VERSION="${CSA_OPERATOR_VERSION:-1.2.0-b27}"
+export CSA_OPERATOR_DEPLOY="${CSA_OPERATOR_DEPLOY:-false}"
+export CSA_OPERATOR_FLINK_DEPLOY="${CSA_OPERATOR_FLINK_DEPLOY:-false}"
+export KAFKA_OPERATOR_VERSION="${KAFKA_OPERATOR_VERSION:-1.3.0-b52}"
+export KAFKA_OPERATOR_DEPLOY="${KAFKA_OPERATOR_DEPLOY:-false}"
+export KAFKA_OPERATOR_KAFKA_DEPLOY="${KAFKA_OPERATOR_KAFKA_DEPLOY:-false}"
 
 # INTERNAL USAGE OF THESE VARIABLES, do no touch these
-export KTS_SERVERS=""
-export KTS_SERVERS_GROUP=""
-export KTS_ACTIVE=""
-export KTS_PASSIVE=""
-export KRB5_SERVERS=""
-export KRB_SERVER_TYPE=""
-export CA_SERVERS=""
-export KMS_SERVERS=""
-export ANSIBLE_PYTHON_3_PARAMS=""
-export USE_ANSIBLE_PYTHON_3="true"
-export ANSIBLE_PYTHON_3_PATH="/usr/bin/python3"
-export SET_PYTHON_3_LINK="false"
-export PVC_ECS_SERVER_HOST=""
-export CLUSTER_NAME_STREAMING=""
-export USE_ROOT_CA="false"
-export USE_OUTSIDE_PAYWALL_BUILDS="false"
-export FREE_IPA_TRIES=2
-export PVC_POST_INSTALL="false"
-export DEPLOY_CERT_MANAGER="false"
+export KTS_SERVERS="${KTS_SERVERS:-}"
+export KTS_SERVERS_GROUP="${KTS_SERVERS_GROUP:-}"
+export KTS_ACTIVE="${KTS_ACTIVE:-}"
+export KTS_PASSIVE="${KTS_PASSIVE:-}"
+export KRB5_SERVERS="${KRB5_SERVERS:-}"
+export KRB_SERVER_TYPE="${KRB_SERVER_TYPE:-}"
+export CA_SERVERS="${CA_SERVERS:-}"
+export KMS_SERVERS="${KMS_SERVERS:-}"
+export ANSIBLE_PYTHON_3_PARAMS="${ANSIBLE_PYTHON_3_PARAMS:-}"
+export USE_ANSIBLE_PYTHON_3="${USE_ANSIBLE_PYTHON_3:-true}"
+export ANSIBLE_PYTHON_3_PATH="${ANSIBLE_PYTHON_3_PATH:-/usr/bin/python3}"
+export SET_PYTHON_3_LINK="${SET_PYTHON_3_LINK:-false}"
+export PVC_ECS_SERVER_HOST="${PVC_ECS_SERVER_HOST:-}"
+export CLUSTER_NAME_STREAMING="${CLUSTER_NAME_STREAMING:-}"
+export USE_ROOT_CA="${USE_ROOT_CA:-false}"
+export USE_OUTSIDE_PAYWALL_BUILDS="${USE_OUTSIDE_PAYWALL_BUILDS:-false}"
+export FREE_IPA_TRIES="${FREE_IPA_TRIES:-2}"
+export PVC_POST_INSTALL="${PVC_POST_INSTALL:-false}"
+export DEPLOY_CERT_MANAGER="${DEPLOY_CERT_MANAGER:-false}"
 # To solve any potential issue with UTF-8
-export ENV='en_US.UTF-8'
-export LC_ALL='en_US.UTF-8'
+export ENV="${ENV:-en_US.UTF-8}"
+export LC_ALL="${LC_ALL:-en_US.UTF-8}"
 
 function usage()
 {
